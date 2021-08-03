@@ -37,6 +37,14 @@ public class Main {
 
         //code
         randomizer = (int)(1 + (20 * Math.random()));
+        magicEightBall = choosingPredictionSwitch(randomizer);
+        System.out.println("***   MAGIC 8-BALL SAYS: \"" + magicEightBall + "\"   ***");
+        return;
+    }
+
+    public static String choosingPredictionSwitch(int randomizer) {
+        // variables
+        String magicEightBall = "";
         switch (randomizer) {
             case 1:
                 magicEightBall = "It is Certain.";
@@ -99,8 +107,7 @@ public class Main {
                 magicEightBall = "Very doubtful.";
                 break;
         }
-        System.out.println("***   MAGIC 8-BALL SAYS: \"" + magicEightBall + "\"   ***");
-        return;
+        return magicEightBall;
     }
 
     public static void sayingGoodbye() {
